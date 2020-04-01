@@ -23,7 +23,7 @@
                     <ComboBox Grid.Column="1">
                         <ComboBoxItem>CNC Lathe</ComboBoxItem>
                         <ComboBoxItem> CNC Mill </ComboBoxItem>
-                        <ComboBoxItem> 3D printer</ComboBoxItem>
+                        <ComboBoxItem> 3D Printer</ComboBoxItem>
                         <ComboBoxItem></ComboBoxItem>
                         
                     </ComboBox>
@@ -38,7 +38,8 @@
                     <TextBlock Grid.Column="0"> Electronics</TextBlock>
                     <ComboBox Grid.Column="1">
                         <ComboBoxItem>Weak Current</ComboBoxItem>
-                        <ComboBoxItem>String current</ComboBoxItem>
+                        <ComboBoxItem>Strong Current</ComboBoxItem>
+                        <ComboBoxItem>Cables</ComboBoxItem>
 
                     </ComboBox>
                 </Grid>
