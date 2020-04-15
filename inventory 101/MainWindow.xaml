@@ -13,7 +13,7 @@
            
       
         <ComboBox SelectionChanged="ComboBox_SelectionChanged">
-            <ComboBoxItem>
+            <ComboBoxItem Name="Category_selection">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -46,20 +46,20 @@
             </ComboBoxItem>
             <ComboBoxItem>Simple tools</ComboBoxItem>
         </ComboBox>
-            
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+        <TextBlock Padding="2" FontWeight="Bold" Name="debugoutput"> Chategory</TextBlock>
+
+
+
+
+
+
+
+
+
+
+
+
     </StackPanel>
 
 

@@ -20,6 +20,9 @@ namespace inventory_101
     /// </summary>
     public partial class MainWindow : Window
     {
+        string debug;
+        ComboBoxItem test;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +30,8 @@ namespace inventory_101
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            debug = (Category_selection).Content.ToString();
+            
         }
     }
 }
