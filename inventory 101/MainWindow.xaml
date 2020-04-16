@@ -9,43 +9,19 @@
     <StackPanel>
 
   
-            <TextBlock Padding="2" FontWeight="Bold"> Chategory </TextBlock>
-           
-      
-        <ComboBox SelectionChanged="ComboBox_SelectionChanged">
-            <ComboBoxItem Name="Category_selection">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0"> Machening </TextBlock>
-                    <ComboBox Grid.Column="1">
-                        <ComboBoxItem>CNC Lathe</ComboBoxItem>
-                        <ComboBoxItem> CNC Mill </ComboBoxItem>
-                        <ComboBoxItem> 3D Printer</ComboBoxItem>
-                        <ComboBoxItem></ComboBoxItem>
-                        
-                    </ComboBox>
-                </Grid>
-            </ComboBoxItem>
-            <ComboBoxItem>
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0"> Electronics</TextBlock>
-                    <ComboBox Grid.Column="1">
-                        <ComboBoxItem>Weak Current</ComboBoxItem>
-                        <ComboBoxItem>Strong Current</ComboBoxItem>
-                        <ComboBoxItem>Cables</ComboBoxItem>
+            <Button Padding="2" FontWeight="Bold" Name="button" Click="button_Click"> Chategory </Button>
 
-                    </ComboBox>
-                </Grid>
-            </ComboBoxItem>
+
+        <ComboBox SelectionChanged="ComboBox_SelectionChanged" Name="Category_selection" Visibility="Visible">
+            <ComboBoxItem>CNC Lathe</ComboBoxItem>
+            <ComboBoxItem>CNC Mill</ComboBoxItem>
+            <ComboBoxItem>3D Printer</ComboBoxItem>
+            <ComboBoxItem>Weak Current</ComboBoxItem>
+            <ComboBoxItem>Strong Current</ComboBoxItem>
+            <ComboBoxItem>Cables</ComboBoxItem>
             <ComboBoxItem>Simple tools</ComboBoxItem>
         </ComboBox>
+        
 
         <TextBlock Padding="2" FontWeight="Bold" Name="debugoutput"> Chategory</TextBlock>
 

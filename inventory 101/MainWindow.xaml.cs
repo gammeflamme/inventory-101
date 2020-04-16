@@ -20,18 +20,33 @@ namespace inventory_101
     /// </summary>
     public partial class MainWindow : Window
     {
-        string debug;
-        ComboBoxItem test;
+        int debug;
+        
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            debug = (Category_selection).Content.ToString();
+            debug = Category_selection.SelectedIndex;
+            debugoutput.Text = debug.ToString();
             
+        }
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            bool visible = (Category_selection.Visibility == Visibility.Visible);
+
+            if (visible)
+            {
+                Category_selection.Visibility = Visibility.Collapsed;
+            }
+            else 
+            {
+                Category_selection.Visibility = Visibility.Visible;
+            }
         }
     }
 }
