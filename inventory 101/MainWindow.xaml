@@ -23,20 +23,59 @@
         </ComboBox>
         
 
-        <TextBlock Padding="2" FontWeight="Bold" Name="debugoutput"> Chategory</TextBlock>
+        <TextBlock Padding="2" FontWeight="Bold" Name="Categorydisplay"> Chategory</TextBlock>
 
 
 
+        <StackPanel Name="cncLathePanel">
+
+
+        </StackPanel>
+        <StackPanel Name="cncMillPanel">
+
+
+        </StackPanel>
+        <StackPanel Name="EDPrinterPanel">
+
+
+        </StackPanel>
+        <StackPanel Name="WeakCurrentPanel">
 
 
 
+        </StackPanel>
+        <StackPanel Name="StrongCurrentPanel">
+
+
+        </StackPanel>
+        <StackPanel Name= "cablePanel">
+        <ListView>
+            <ListView.View>
+        <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="Cabels">
+                    <GridViewColumn Header="Id" Width="auto"  />
+                    <GridViewColumn Header="Name" Width="auto"  />
+            <GridViewColumn Header="Length" Width="auto"  />
+        </GridView>
+            </ListView.View>
+        </ListView>
+            <TextBlock>Add Cable</TextBlock>
+            <TextBlock>Name</TextBlock>
+            <TextBox Name="CableName"></TextBox>
+            <TextBlock>Length</TextBlock>
+            <TextBox Name="CableLength"></TextBox>
+        <Button Padding="2" FontWeight="Bold" x:Name="Save_button" Click="SaveClickCables" Content="Save"/>
+        </StackPanel>
+        <StackPanel Name="SimpleToolsPanel">
+
+
+        </StackPanel>
 
 
 
-
-
-
+        <TextBlock Name="DebugOutput"></TextBlock>
+        
     </StackPanel>
+
 
 
 </Window>

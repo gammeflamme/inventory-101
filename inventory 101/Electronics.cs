@@ -4,7 +4,7 @@ using System.Text;
 
 namespace inventory_101
 {
-    class Electronics : Items
+    public class Electronics : Items
     {
         float maxAmperage;
         float minAmperage;

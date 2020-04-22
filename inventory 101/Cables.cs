@@ -4,8 +4,8 @@ using System.Text;
 
 namespace inventory_101
 {
-    class Cables : Electronics
+    public class Cables : Electronics
     {
-        int length;
+        public float length;
     }
 }
