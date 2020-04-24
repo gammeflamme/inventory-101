@@ -15,7 +15,6 @@ using System.Windows.Shapes;
 using System.Xml;
 using System.Xml.Serialization;
 using System.IO;
-using System.Collections.Generic;
 
 
 namespace inventory_101
@@ -30,9 +29,9 @@ namespace inventory_101
         int selectedCategoryId;
         List<StackPanel> categoryPanels = new List<StackPanel>();
         List<Cables> items = new List<Cables>();
-        public XmlSerializer serialiser = new XmlSerializer(typeof(List<Cables>));
-        
-        
+        FileHandeler fileHandeler = new FileHandeler();
+
+
 
         public MainWindow()
         {
@@ -52,18 +51,7 @@ namespace inventory_101
 
 
             }
-            //loads the items file
-            
-            
-            using (FileStream file = File.Open(@"Items.xml", FileMode.OpenOrCreate))
-            {
 
-                items = (List<Cables>)serialiser.Deserialize(file);
-
-
-
-            }
-            
 
 
         }
@@ -141,24 +129,27 @@ namespace inventory_101
                 }
                 
             }
-            else { 
+            else {
 
-            Debug(Name);
                 cable.length = length;
                 cable.name = Name;
-                cable.id = 0;
-                items.Add(cable);
-                items.Add(cable);
+                ItemLists lists = fileHandeler.Load();
+                cable.id = lists.cabels.Count();
+                lists.cabels.Add(cable);
+                fileHandeler.Save(lists);
+
+                MessageBox.Show("sucsessfully saved \"" + cable.name + "\"");
+
+
+
+
+
+
+                Debug(Name);
+
                 Debug(cable.name +" "+ cable.length);
                 
-                using (FileStream file = File.Open(@"Items.xml", FileMode.OpenOrCreate))
-                {
 
-                    serialiser.Serialize(file, items);
-
-
-
-                }
             }
         }
 

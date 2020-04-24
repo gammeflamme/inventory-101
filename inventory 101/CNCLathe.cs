@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-
 namespace inventory_101
 {
-
-    public class Cables : Electronics
+    class CNCLathe : Items
     {
-        public float length;
     }
 }
