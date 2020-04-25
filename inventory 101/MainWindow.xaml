@@ -10,7 +10,7 @@
 
   
             <Button Padding="2" FontWeight="Bold" Name="button" Click="button_Click"> Chategory </Button>
-
+        <TextBlock> Right now only cabels work</TextBlock>
 
         <ComboBox SelectionChanged="ComboBox_SelectionChanged" Name="Category_selection" Visibility="Visible">
             <ComboBoxItem>CNC Lathe</ComboBoxItem>
@@ -49,15 +49,9 @@
 
         </StackPanel>
         <StackPanel Name= "cablePanel">
-        <ListView>
-            <ListView.View>
-        <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="Cabels">
-                    <GridViewColumn Header="Id" Width="auto"  />
-                    <GridViewColumn Header="Name" Width="auto"  />
-            <GridViewColumn Header="Length" Width="auto"  />
-        </GridView>
-            </ListView.View>
-        </ListView>
+        <ListBox Name="cableListShow" SelectionChanged="cableListShow_SelectionChanged">
+
+        </ListBox>
             <TextBlock>Add Cable</TextBlock>
             <TextBlock>Name</TextBlock>
             <TextBox Name="CableName"></TextBox>

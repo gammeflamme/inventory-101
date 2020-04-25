@@ -4,7 +4,7 @@ using System.Text;
 
 namespace inventory_101
 {
-    class CNCMill : Items
+    public class CNCMill : Items
     {
     }
 }

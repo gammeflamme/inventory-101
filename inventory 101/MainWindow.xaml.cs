@@ -29,7 +29,7 @@ namespace inventory_101
         int selectedCategoryId;
         List<StackPanel> categoryPanels = new List<StackPanel>();
         List<Cables> items = new List<Cables>();
-        FileHandeler fileHandeler = new FileHandeler();
+        public FileHandeler fileHandelerAlive = new FileHandeler();
 
 
 
@@ -95,9 +95,11 @@ namespace inventory_101
 
         if(selectedCategoryId == 5) 
             {
-               
 
-            
+                InitializeComponent();
+                List<Cables> items = fileHandelerAlive.get().cabels;
+                cableListShow.ItemsSource = items;
+
             }
         
         
@@ -131,24 +133,28 @@ namespace inventory_101
             }
             else {
 
+
+                //////// adds cable
                 cable.length = length;
                 cable.name = Name;
-                ItemLists lists = fileHandeler.Load();
+                ItemLists lists = fileHandelerAlive.get();
                 cable.id = lists.cabels.Count();
                 lists.cabels.Add(cable);
-                fileHandeler.Save(lists);
+                fileHandelerAlive.set(lists);
+
+                
 
                 MessageBox.Show("sucsessfully saved \"" + cable.name + "\"");
 
+                ////////////////// refreshes list
 
-
-
-
-
-                Debug(Name);
-
-                Debug(cable.name +" "+ cable.length);
+                InitializeComponent();
+                List<Cables> items = fileHandelerAlive.get().cabels;
+                cableListShow.ItemsSource = items;
                 
+
+
+
 
             }
         }
@@ -161,5 +167,9 @@ namespace inventory_101
 
         }
 
+        private void cableListShow_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace inventory_101
 {
-    class WeakCurrent : Electronics
+    public class WeakCurrent : Electronics
     {
     }
 }
