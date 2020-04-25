@@ -4,7 +4,7 @@ using System.Text;
 
 namespace inventory_101
 {
-    public class SimpleTools : Items
+    class SimpleTools : Items
     {
     }
 }

@@ -9,49 +9,46 @@ using System.IO;
 
 namespace inventory_101
 {
-    public class FileHandeler
+    class FileHandeler
     {
         XmlSerializer serialiser = new XmlSerializer(typeof(ItemLists));
 
-        bool isSaved = true;
-        public ItemLists get() 
+        public ItemLists Load() 
         {
 
             using (FileStream file = File.Open(@"Items.xml", FileMode.OpenOrCreate))
             {
 
-                isSaved = false;
+                
                 try
                 {
-                    
                     return (ItemLists)serialiser.Deserialize(file);
-                    
                 }
                 catch(System.InvalidOperationException)
                 {
                     return (new ItemLists());
-                    
                 }
-                
             }
         }
-        public void set(ItemLists lists) 
+        public void Save(ItemLists lists) 
         {
 
             using (FileStream file = File.Open(@"Items.xml", FileMode.OpenOrCreate))
             {
 
                 serialiser.Serialize(file, lists);
-                isSaved = true;
+
 
 
             }
 
 
         }
-        
-        
-        
+
+
+
+
+
 
 
 

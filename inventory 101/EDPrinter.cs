@@ -4,7 +4,7 @@ using System.Text;
 
 namespace inventory_101
 {
-    public class EDPrinter : Items
+    class EDPrinter : Items
     {
     }
 }

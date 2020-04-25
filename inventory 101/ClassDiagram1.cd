@@ -45,7 +45,7 @@
   <Class Name="inventory_101.FileHandeler">
     <Position X="15.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAQAQAAAAAAAAAAABAAAAAAAgAA=</HashCode>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>FileHandeler.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -66,7 +66,7 @@
   <Class Name="inventory_101.MainWindow" BaseTypeListCollapsed="true">
     <Position X="17.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAgAAAAAIQAAAggAAAAABABAAAAAoAAQAAAAAA=</HashCode>
+      <HashCode>ABAAAAAgAAAAAIQAAAggIAAAABABAAAAAgAAQAAAAAA=</HashCode>
       <FileName>MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
