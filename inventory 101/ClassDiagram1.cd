@@ -10,7 +10,7 @@
   <Class Name="inventory_101.Cables">
     <Position X="10" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Cables.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -63,14 +63,6 @@
       <FileName>Items.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="inventory_101.MainWindow" BaseTypeListCollapsed="true">
-    <Position X="17.5" Y="4" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>ABAAAAAgAAAAAIQAAAggIAAAABABAAAAAgAAQAAAAAA=</HashCode>
-      <FileName>MainWindow.xaml.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
   <Class Name="inventory_101.SimpleTools">
     <Position X="13.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
@@ -91,6 +83,14 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>WeakCurrent.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="inventory_101.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAgAAAAAIQAAAggAAAAABABgAAAAgAAQAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

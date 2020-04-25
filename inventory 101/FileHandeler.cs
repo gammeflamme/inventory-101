@@ -9,7 +9,7 @@ using System.IO;
 
 namespace inventory_101
 {
-    class FileHandeler
+    public class FileHandeler
     {
         XmlSerializer serialiser = new XmlSerializer(typeof(ItemLists));
 
@@ -19,7 +19,7 @@ namespace inventory_101
             using (FileStream file = File.Open(@"Items.xml", FileMode.OpenOrCreate))
             {
 
-                
+                //return (ItemLists)serialiser.Deserialize(file);
                 try
                 {
                     return (ItemLists)serialiser.Deserialize(file);

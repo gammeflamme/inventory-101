@@ -10,7 +10,7 @@
 
   
             <Button Padding="2" FontWeight="Bold" Name="button" Click="button_Click"> Chategory </Button>
-
+        <TextBlock>currently only cables work</TextBlock>
 
         <ComboBox SelectionChanged="ComboBox_SelectionChanged" Name="Category_selection" Visibility="Visible">
             <ComboBoxItem>CNC Lathe</ComboBoxItem>
@@ -49,20 +49,15 @@
 
         </StackPanel>
         <StackPanel Name= "cablePanel">
-        <ListView>
-            <ListView.View>
-        <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="Cabels">
-                    <GridViewColumn Header="Id" Width="auto"  />
-                    <GridViewColumn Header="Name" Width="auto"  />
-            <GridViewColumn Header="Length" Width="auto"  />
-        </GridView>
-            </ListView.View>
+        <ListView Name="cablelistshow">
+
         </ListView>
             <TextBlock>Add Cable</TextBlock>
             <TextBlock>Name</TextBlock>
             <TextBox Name="CableName"></TextBox>
             <TextBlock>Length</TextBlock>
             <TextBox Name="CableLength"></TextBox>
+            <Button Visibility="Collapsed" Name="RemoveCable" Click="RemoveCable_Click">Remove</Button>
         <Button Padding="2" FontWeight="Bold" x:Name="Save_button" Click="SaveClickCables" Content="Save"/>
         </StackPanel>
         <StackPanel Name="SimpleToolsPanel">

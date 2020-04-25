@@ -29,7 +29,7 @@ namespace inventory_101
         int selectedCategoryId;
         List<StackPanel> categoryPanels = new List<StackPanel>();
         List<Cables> items = new List<Cables>();
-        FileHandeler fileHandeler = new FileHandeler();
+        public FileHandeler fileHandeleralive = new FileHandeler();
 
 
 
@@ -95,8 +95,8 @@ namespace inventory_101
 
         if(selectedCategoryId == 5) 
             {
-               
 
+                cablelistshow.ItemsSource = fileHandeleralive.Load().cabels;
             
             }
         
@@ -131,24 +131,24 @@ namespace inventory_101
             }
             else {
 
+
+                /// adds cable
                 cable.length = length;
                 cable.name = Name;
-                ItemLists lists = fileHandeler.Load();
+                ItemLists lists = fileHandeleralive.Load();
                 cable.id = lists.cabels.Count();
                 lists.cabels.Add(cable);
-                fileHandeler.Save(lists);
+                fileHandeleralive.Save(lists);
 
-                MessageBox.Show("sucsessfully saved \"" + cable.name + "\"");
-
-
+                //MessageBox.Show("sucsessfully saved \"" + cable.name + "\"");
 
 
 
+                //refreshes list
+                cablelistshow.ItemsSource = fileHandeleralive.Load().cabels;
 
-                Debug(Name);
 
-                Debug(cable.name +" "+ cable.length);
-                
+
 
             }
         }
@@ -161,5 +161,9 @@ namespace inventory_101
 
         }
 
+        private void RemoveCable_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
